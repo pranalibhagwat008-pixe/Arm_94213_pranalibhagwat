@@ -1,0 +1,27 @@
+!SESSION 2025-12-23 09:55:57.220 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-12-23 09:56:24.159
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-12-23 09:56:24.173
+!MESSAGE Log4j2 initialized with config file C:\Users\nitin\Desktop\ARM_internship\Arm_94213_pranalibhagwat\Demo_HAL_EXTI_INTERUPT\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-12-23 09:56:30.547
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-23 09:58:22.940
+!MESSAGE Indexed 'HAL_EXTINTER' (19 sources, 81 headers) in 6.15 sec: 4,442 declarations; 18,507 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0087%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-23 10:19:32.539
+!MESSAGE Indexed 'HAL_EXINTR' (19 sources, 115 headers) in 4.59 sec: 10,363 declarations; 36,117 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.51%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-23 10:25:55.467
+!MESSAGE Indexed 'HAL_Switch' (19 sources, 115 headers) in 5.19 sec: 10,356 declarations; 36,085 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.51%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-23 10:29:41.750
+!MESSAGE Indexed 'HAL_SWITCH_DEMO' (19 sources, 81 headers) in 3.33 sec: 4,442 declarations; 18,507 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0087%)
