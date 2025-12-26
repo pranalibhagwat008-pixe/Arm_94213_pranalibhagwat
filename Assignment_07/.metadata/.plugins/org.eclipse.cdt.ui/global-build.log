@@ -1,0 +1,51 @@
+16:13:19 **** Incremental Build of configuration Debug for project QUESTION4 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:60:1: warning: data definition has no type or storage class
+   60 | seg[20]={0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39 };
+      | ^~~
+../Core/Src/main.c:60:1: warning: type defaults to 'int' in declaration of 'seg' [-Wimplicit-int]
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:10: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  114 |          sprintf(msg,"%d",i);
+      |          ^~~~~~~
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   21 | #include "my_lcd.h"
+  +++ |+#include <stdio.h>
+   22 | 
+../Core/Src/main.c:114:10: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  114 |          sprintf(msg,"%d",i);
+      |          ^~~~~~~
+../Core/Src/main.c:114:10: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-none-eabi-gcc -o "QUESTION4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\nitin\Desktop\ARM_internship\Arm_94213_pranalibhagwat\Assignment_07\QUESTION4\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="QUESTION4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: QUESTION4.elf
+ 
+arm-none-eabi-size  QUESTION4.elf 
+arm-none-eabi-objdump -h -S QUESTION4.elf  > "QUESTION4.list"
+   text	   data	    bss	    dec	    hex	filename
+  12340	     92	   1996	  14428	   385c	QUESTION4.elf
+Finished building: default.size.stdout
+ 
+Finished building: QUESTION4.list
+ 
+16:13:26 **** Incremental Build of configuration Debug for project QUESTION4 ****
+make -j12 all 
+arm-none-eabi-size  QUESTION4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12340	     92	   1996	  14428	   385c	QUESTION4.elf
+Finished building: default.size.stdout
+ 
+16:13:33 **** Incremental Build of configuration Debug for project QUESTION4 ****
+make -j12 all 
+arm-none-eabi-size  QUESTION4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12340	     92	   1996	  14428	   385c	QUESTION4.elf
+Finished building: default.size.stdout
+ 
+16:13:46 **** Incremental Build of configuration Debug for project QUESTION4 ****
+make -j12 all 
+arm-none-eabi-size  QUESTION4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12340	     92	   1996	  14428	   385c	QUESTION4.elf
+Finished building: default.size.stdout
+ 
