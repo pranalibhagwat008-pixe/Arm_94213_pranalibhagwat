@@ -1,0 +1,33 @@
+!SESSION 2025-12-29 11:11:57.396 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-12-29 11:12:26.671
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-12-29 11:12:26.671
+!MESSAGE Log4j2 initialized with config file C:\Users\nitin\Desktop\ARM_internship\Arm_94213_pranalibhagwat\LDR_PROGRAM\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-12-29 11:12:38.067
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-29 11:15:09.309
+!MESSAGE Indexed 'LDR_WITHOUT_LCD' (19 sources, 81 headers) in 5.97 sec: 4,442 declarations; 18,507 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0087%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-29 11:55:00.209
+!MESSAGE Indexed 'LDR' (23 sources, 119 headers) in 7.54 sec: 11,730 declarations; 45,575 references; 5 unresolved inclusions; 1,132 syntax errors; 1,546 unresolved names (2.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-29 11:56:48.784
+!MESSAGE Indexed 'LDR_WITH_LCD' (19 sources, 81 headers) in 4.92 sec: 4,442 declarations; 18,507 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0087%)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-12-29 12:20:48.689
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@3824dff4): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-29 12:45:09.440
+!MESSAGE Indexed 'QUESTION2' (22 sources, 124 headers) in 5.68 sec: 11,736 declarations; 46,697 references; 7 unresolved inclusions; 990 syntax errors; 1,409 unresolved names (2.4%)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-12-29 12:50:32.408
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@6525cc18): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
