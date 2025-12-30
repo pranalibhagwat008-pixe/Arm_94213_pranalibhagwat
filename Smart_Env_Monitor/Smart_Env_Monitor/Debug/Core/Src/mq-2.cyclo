@@ -1,0 +1,2 @@
+../Core/Src/mq-2.c:20:7:MX_ADC1_Init	3
+../Core/Src/mq-2.c:63:12:adc_Read	1

@@ -1,0 +1,28 @@
+16:48:34 **** Incremental Build of configuration Debug for project Smart_Env_Monitor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:26: warning: this 'else' clause does not guard... [-Wmisleading-indentation]
+  139 |                          else
+      |                          ^~~~
+../Core/Src/main.c:141:42: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'else'
+  141 |                                          HAL_Delay(1000);
+      |                                          ^~~~~~~~~
+arm-none-eabi-gcc -o "Smart_Env_Monitor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\nitin\Desktop\ARM_internship\Arm_94213_pranalibhagwat\Smart_Env_Monitor\Smart_Env_Monitor\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Smart_Env_Monitor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Smart_Env_Monitor.elf
+ 
+arm-none-eabi-size  Smart_Env_Monitor.elf 
+arm-none-eabi-objdump -h -S Smart_Env_Monitor.elf  > "Smart_Env_Monitor.list"
+   text	   data	    bss	    dec	    hex	filename
+  15032	     92	   2068	  17192	   4328	Smart_Env_Monitor.elf
+Finished building: default.size.stdout
+ 
+Finished building: Smart_Env_Monitor.list
+ 
+16:48:41 **** Incremental Build of configuration Debug for project Smart_Env_Monitor ****
+make -j12 all 
+arm-none-eabi-size  Smart_Env_Monitor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15032	     92	   2068	  17192	   4328	Smart_Env_Monitor.elf
+Finished building: default.size.stdout
+ 
