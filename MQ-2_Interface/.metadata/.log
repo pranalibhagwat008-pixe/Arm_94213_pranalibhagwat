@@ -1,0 +1,27 @@
+!SESSION 2025-12-30 09:10:01.541 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\nitin\Desktop\ARM_internship\Arm_94213_pranalibhagwat\MQ-2_Interface
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-12-30 09:10:14.520
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-12-30 09:10:14.525
+!MESSAGE Log4j2 initialized with config file C:\Users\nitin\Desktop\ARM_internship\Arm_94213_pranalibhagwat\MQ-2_Interface\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-12-30 09:10:21.434
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-30 09:12:01.503
+!MESSAGE Indexed 'MQ-2_Sensor' (19 sources, 81 headers) in 5.73 sec: 4,442 declarations; 18,507 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0087%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-30 09:18:23.531
+!MESSAGE Indexed 'HAL_BUZZER' (19 sources, 114 headers) in 7.38 sec: 10,349 declarations; 34,190 references; 5 unresolved inclusions; 875 syntax errors; 1,183 unresolved names (2.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-30 09:25:04.438
+!MESSAGE Indexed 'LDR_WITHOUT_LCD' (25 sources, 122 headers) in 6.13 sec: 12,720 declarations; 57,550 references; 5 unresolved inclusions; 1,247 syntax errors; 1,749 unresolved names (2.4%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-30 09:26:32.255
+!MESSAGE Indexed 'USART2_BUZZER' (20 sources, 116 headers) in 4.5 sec: 11,159 declarations; 40,461 references; 7 unresolved inclusions; 1,020 syntax errors; 1,296 unresolved names (2.4%)

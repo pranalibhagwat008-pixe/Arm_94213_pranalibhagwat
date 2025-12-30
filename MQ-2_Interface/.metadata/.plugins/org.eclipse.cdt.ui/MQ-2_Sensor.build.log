@@ -1,0 +1,10 @@
+10:08:10 **** Incremental Build of configuration Debug for project MQ-2_Sensor ****
+make -j12 all 
+arm-none-eabi-size  MQ-2_Sensor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14436	     92	   2132	  16660	   4114	MQ-2_Sensor.elf
+Finished building: default.size.stdout
+ 
+
+10:08:11 Build Finished. 0 errors, 0 warnings. (took 637ms)
+

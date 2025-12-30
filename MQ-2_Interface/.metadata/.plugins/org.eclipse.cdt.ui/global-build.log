@@ -1,0 +1,44 @@
+10:07:54 **** Incremental Build of configuration Debug for project MQ-2_Sensor ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:19: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  122 |                   sprintf(str , "smoke : %d\r\n",val);
+      |                   ^~~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:122:19: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  122 |                   sprintf(str , "smoke : %d\r\n",val);
+      |                   ^~~~~~~
+../Core/Src/main.c:122:19: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:123:62: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  123 |                   HAL_UART_Transmit(&huart2, (uint8_t *)str, strlen(str), HAL_MAX_DELAY);
+      |                                                              ^~~~~~
+../Core/Src/main.c:21:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   20 | #include "main.h"
+  +++ |+#include <string.h>
+   21 | 
+../Core/Src/main.c:123:62: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
+  123 |                   HAL_UART_Transmit(&huart2, (uint8_t *)str, strlen(str), HAL_MAX_DELAY);
+      |                                                              ^~~~~~
+../Core/Src/main.c:123:62: note: include '<string.h>' or provide a declaration of 'strlen'
+arm-none-eabi-gcc -o "MQ-2_Sensor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\nitin\Desktop\ARM_internship\Arm_94213_pranalibhagwat\MQ-2_Interface\MQ-2_Sensor\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MQ-2_Sensor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MQ-2_Sensor.elf
+ 
+arm-none-eabi-size  MQ-2_Sensor.elf 
+arm-none-eabi-objdump -h -S MQ-2_Sensor.elf  > "MQ-2_Sensor.list"
+   text	   data	    bss	    dec	    hex	filename
+  14436	     92	   2132	  16660	   4114	MQ-2_Sensor.elf
+Finished building: default.size.stdout
+ 
+Finished building: MQ-2_Sensor.list
+ 
+10:08:10 **** Incremental Build of configuration Debug for project MQ-2_Sensor ****
+make -j12 all 
+arm-none-eabi-size  MQ-2_Sensor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14436	     92	   2132	  16660	   4114	MQ-2_Sensor.elf
+Finished building: default.size.stdout
+ 
