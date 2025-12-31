@@ -18,10 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dht11.h"
+#include "my_lcd.h"
 #include <stdio.h>
 #include <string.h>
-#include "my_lcd.h"
 #include "mq-2.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -41,12 +43,14 @@
 /* USER CODE BEGIN PM */
 
 
-I2C_HandleTypeDef hi2c1;
+//I2C_HandleTypeDef hi2c1;
 
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+//ADC_HandleTypeDef hadc1;
 
+I2C_HandleTypeDef hi2c1;
 
 /* USER CODE BEGIN PV */
 
@@ -55,6 +59,7 @@ I2C_HandleTypeDef hi2c1;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
@@ -74,6 +79,9 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
 uint16_t val=0;
+uint16_t temp ;
+uint16_t hum ;
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -111,6 +119,23 @@ char str[32];
 
     /* USER CODE BEGIN 3 */
 
+// dht11 sensor program
+	  lcd16x2_i2c_clear();
+	    DHT11_Read(&temp,&hum);
+		char t[32];
+		char h[32];
+		sprintf(t,"t:%d\r\n",temp);
+		sprintf(h,"h:%d\r\n",hum);
+	    lcd16x2_i2c_setCursor(0, 0);
+	    lcd16x2_i2c_printf(t);
+	    lcd16x2_i2c_printf(temp);
+	    lcd16x2_i2c_setCursor(1, 0);
+	        lcd16x2_i2c_printf(h);
+	        lcd16x2_i2c_printf(hum);
+
+	    HAL_Delay(1000);
+
+	  // mq-2 smoke detector sensor program
   val=adc_Read();
    lcd16x2_i2c_clear();
   lcd16x2_i2c_setCursor(0,0);
@@ -192,6 +217,8 @@ void SystemClock_Config(void)
 }
 
 
+
+
 /**
   * @brief I2C1 Initialization Function
   * @param None
@@ -239,6 +266,7 @@ static void MX_GPIO_Init(void)
   /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
