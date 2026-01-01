@@ -79,8 +79,8 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
 uint16_t val=0;
-uint16_t temp ;
-uint16_t hum ;
+uint8_t temp ;
+uint8_t hum ;
 
   /* USER CODE END 1 */
 
@@ -113,6 +113,8 @@ if (!lcd16x2_i2c_init(&hi2c1)){
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 char str[32];
+char t[32];
+char h[32];
   while (1)
   {
     /* USER CODE END WHILE */
@@ -120,19 +122,14 @@ char str[32];
     /* USER CODE BEGIN 3 */
 
 // dht11 sensor program
-	  lcd16x2_i2c_clear();
-	    DHT11_Read(&temp,&hum);
-		char t[32];
-		char h[32];
-		sprintf(t,"t:%d\r\n",temp);
-		sprintf(h,"h:%d\r\n",hum);
-	    lcd16x2_i2c_setCursor(0, 0);
-	    lcd16x2_i2c_printf(t);
-	    lcd16x2_i2c_printf(temp);
+	   DHT11_Read(&temp,&hum);
+	   lcd16x2_i2c_clear();
+	   lcd16x2_i2c_setCursor(0, 0);
+		sprintf(t,"t:%4d",temp);
+	  lcd16x2_i2c_printf(t);
+		sprintf(h,"h:%4d",hum);
 	    lcd16x2_i2c_setCursor(1, 0);
 	        lcd16x2_i2c_printf(h);
-	        lcd16x2_i2c_printf(hum);
-
 	    HAL_Delay(1000);
 
 	  // mq-2 smoke detector sensor program
